@@ -33,6 +33,19 @@ from django.contrib import admin
 ```
 ### admin.py:
 ```py
+from django.db import models
+from django.contrib import admin
+#creat your modelsr=models.CharField(primary_key=True,max_lenght=20,help_text="referencenumber")
+    name=models.CharFiled(max_lenght=100)
+    age=models.IntegerFiled()
+    email=models.EmailFiled()
+    phonenumber=mopdels.IntegerFiled()
+
+    class StudentAdmin(admin.ModelAdmin):
+       list_display=('referencenumber','name','age','email','phonenumber')
+```
+### admin.py:
+```py
 class student (models.Model):
     referencenumbe
 from django.contrib import admin
